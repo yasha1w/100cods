@@ -1,0 +1,163 @@
+Comandos Básicos do Git:
+1 - git init`: Inicializa um repositório Git em um diretório.
+2 - git clone <url>`: Clona um repositório Git existente para o diretório local.
+3 - git add <arquivo>`: Adiciona alterações de um arquivo específico ao índice.
+4 - git add .` ou `git add --all`: Adiciona todas as alterações ao índice.
+5 - git commit -m "<mensagem>"`: Registra as alterações no repositório com uma mensagem.
+6 - git status`: Mostra o status das alterações no repositório.
+7 - git log`: Exibe o histórico de commits.
+8 - git diff`: Mostra as diferenças entre arquivos não rastreados e o último commit.
+9 - git branch`: Lista todas as branches locais.
+10 - git checkout <branch>`: Muda para a branch especificada.
+11 - git checkout -b <nome_branch>`: Cria uma nova branch e muda para ela.
+12 - git merge <branch>`: Mescla uma branch específica na branch atual.
+13 - git pull`: Puxa as alterações do repositório remoto para o branch atual.
+14 - git push`: Empurra as alterações locais para o repositório remoto.
+
+Comandos Avançados do Git:
+15. `git reset <commit>`: Reseta o HEAD para um commit específico.
+16. `git revert <commit>`: Desfaz um commit específico.
+17. `git cherry-pick <commit>`: Aplica um commit específico em um branch diferente.
+18. `git rebase <branch>`: Reorganiza o histórico de commits para se basear no branch especificado.
+19. `git stash`: Armazena temporariamente as alterações locais.
+20. `git bisect`: Ajuda a encontrar o commit que introduziu um bug.
+21. `git tag`: Lista, cria ou verifica tags anotadas.
+
+Comandos para Trabalhar com Repositórios Remotos:
+22. `git remote`: Lista todos os repositórios remotos.
+23. `git remote -v`: Lista os URLs dos repositórios remotos.
+24. `git fetch <remote>`: Puxa todas as branches do repositório remoto.
+25. `git pull <remote> <branch>`: Puxa e mescla as alterações de um repositório remoto.
+26. `git push <remote> <branch>`: Empurra as alterações locais para um repositório remoto.
+
+Comandos do GitHub:
+27. `git remote add origin <url>`: Adiciona um repositório remoto chamado "origin".
+28. `git push -u origin <branch>`: Empurra o branch local para o repositório remoto e define a branch remota como upstream.
+29. `git clone -b <branch> <url>`: Clona um repositório Git e muda para a branch especificada.
+30. `git branch -d <branch>`: Deleta uma branch local.
+31. `git push origin --delete <branch>`: Deleta uma branch remota.
+32. `git remote set-url origin <url>`: Atualiza a URL do repositório remoto "origin".
+33. `git config --global credential.helper cache`: Armazena temporariamente as credenciais do GitHub na memória.
+34. `git config --global credential.helper 'cache --timeout=<tempo>'`: Define um tempo limite para armazenar as credenciais do GitHub.
+
+Trabalhando com Submódulos:
+35. `git submodule add <url>`: Adiciona um submódulo ao seu repositório.
+36. `git submodule update --init`: Inicializa os submódulos do repositório.
+37. `git submodule foreach <comando>`: Executa um comando em cada submódulo.
+
+Resolução de Problemas:
+38 - git fsck`: Verifica a integridade do repositório.
+39 - git clean -n`: Mostra quais arquivos seriam removidos pela limpeza.
+40 - git clean -f`: Remove arquivos não rastreados.
+
+Comandos de Configuração:
+41. `git config --global user.name "<nome>"`: Define o nome do usuário.
+42. `git config --global user.email "<email>"`: Define o email do usuário.
+43. `git config --global core.editor "<editor>"`: Define o editor padrão.
+44. `git config --global alias.<alias> "<comando>"`: Cria um atalho para um comando.
+
+Comandos de Ramificação e Mesclagem:
+45. `git branch -m <antiga_branch> <nova_branch>`: Renomeia uma branch local.
+46. `git merge --abort`: Cancela uma mesclagem em andamento.
+47. `git merge --no-ff <branch>`: Força a criação de um commit de mesclagem, mesmo em caso de merge fast-forward.
+
+Comandos de Análise de Código:
+48. `git blame <arquivo>`: Mostra quem alterou cada linha de um arquivo.
+49. `git log -S<string>`: Procura por uma string específica no histórico de commits.
+50. `git log --grep="<padrão>"`: Filtra os commits com base em um padrão específico.
+
+Comandos para Ignorar Arquivos:
+51. `.gitignore`: Arquivo usado para especificar arquivos que o Git deve ignorar.
+52. `git check-ignore -v <arquivo>`: Verifica por que um arquivo está sendo ignorado.
+
+Comandos para Lidar com Conflitos:
+53. `git mergetool`: Abre uma ferramenta para ajudar na resolução de conflitos de mesclagem.
+54. `git difftool`: Abre uma ferramenta para visualizar e editar diferenças de arquivos.
+
+Comandos de Visualização:
+55. `git show <commit>`: Mostra as alterações introduzidas por um commit específico.
+56. `git log --graph --oneline`: Mostra o histórico de commits de forma simplificada e gráfica.
+
+Comandos de Refatoração:
+57. `git rebase -i <commit>`: Interage com o rebase interativamente para reorganizar ou modificar commits.
+58. `git commit --amend`: Adiciona mudanças ao commit mais recente.
+
+Comandos para Trabalhar com Remotos:
+59. `git remote rename <nome_antigo> <nome_novo>`: Renomeia um repositório remoto.
+60. `git remote rm <nome>`: Remove um repositório remoto.
+
+Comandos de Gerenciamento de Versão:
+
+61. `git tag -a <tag> -m "<mensagem>"`: Cria uma tag anotada com uma mensagem.
+62. `git describe --tags`: Mostra a última tag em que um commit está baseado.
+63. `git describe --abbrev=0 --tags`: Mostra apenas o número da última tag.
+
+Comandos de Histórico:
+64. `git log --stat`: Mostra estatísticas de alterações em cada commit.
+65. `git log --oneline --graph --decorate --all`: Mostra uma visão geral gráfica de todas as branches e commits.
+66. `git log --author="<autor>"`: Filtra os commits por autor.
+
+Comandos para Manipulação de Arquivos:
+67. `git rm <arquivo>`: Remove um arquivo do repositório.
+68. `git mv <arquivo_antigo> <arquivo_novo>`: Renomeia ou move um arquivo no repositório.
+
+Comandos para Limpar o Histórico:
+69. `git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <arquivo>'`: Remove um arquivo do histórico.
+70. `git reflog`: Mostra um log de referências que afetaram o repositório.
+
+Comandos de Desfazer Alterações:
+71. `git checkout -- <arquivo>`: Desfaz alterações em um arquivo específico.
+72. `git reset HEAD <arquivo>`: Remove um arquivo do índice.
+
+Comandos de Integração com Serviços de Hospedagem:
+73. `git push heroku master`: Faz deploy de uma aplicação no Heroku.
+74. `git push --mirror <url_repositório_destino>`: Espelha todos os branches e tags para outro repositório.
+
+### Comandos para Trabalhar com Workflows:
+
+75. `git rebase -i <commit>`: Reorganiza ou edita commits antes de enviá-los para revisão.
+76. `git bisect start`: Inicia um processo de bissecção para encontrar um commit problemático.
+77. `git bisect bad`: Marca o commit atual como ruim durante o processo de bissecção.
+78. `git bisect good <commit>`: Marca um commit conhecido como bom durante o processo de bissecção.
+79. `git bisect reset`: Termina o processo de bissecção.
+
+### Comandos para Trabalhar com Submódulos:
+
+80. `git submodule update --remote`: Atualiza os submódulos para as últimas versões.
+81. `git submodule status`: Mostra o estado dos submódulos no repositório.
+
+### Comandos de Gerenciamento de Tags:
+
+82. `git tag -d <tag>`: Deleta uma tag local.
+83. `git push --delete origin <tag>`: Deleta uma tag remota.
+84. `git fetch --tags`: Puxa todas as tags do repositório remoto.
+
+### Comandos de Gerenciamento de Colaboradores:
+
+85. `git pull --rebase`: Puxa e reorganiza as alterações locais em relação ao repositório remoto.
+86. `git push --force`: Força o push das alterações locais para o repositório remoto.
+
+Comandos de Atualização:
+87. `git fetch origin`: Puxa todas as alterações do repositório remoto.
+88. `git pull --all`: Puxa todas as branches e atualiza o repositório local.
+
+Comandos para Trabalhar com Forks:
+89. `git remote add upstream <url_repositório_original>`: Adiciona o repositório original como upstream.
+90. `git fetch upstream`: Puxa as alterações do repositório original.
+91. `git merge upstream/master`: Mescla as alterações do repositório original no branch local.
+
+Comandos para Trabalhar com Issues:
+92. `git commit -m "Fixes #<número_da_issue>"`: Associa um commit a uma issue específica no GitHub.
+93. `git commit -m "Closes #<número_da_issue>"`: Fecha automaticamente uma issue ao fazer um commit.
+
+Comandos de Configuração de SSH:
+94. `ssh-keygen -t rsa -b 4096 -C "<seu_email>"`: Gera uma nova chave SSH.
+95. `eval "$(ssh-agent -s)"`: Inicia o agente SSH.
+96. `ssh-add ~/.ssh/id_rsa`: Adiciona a chave SSH privada ao agente.
+
+Comandos de Análise de Performance:
+97. `git gc`: Executa a coleta de lixo para otimizar o repositório.
+98. `git fsck --full`: Realiza uma verificação completa da integridade do repositório.
+99. `git count-objects -v`: Conta os objetos no repositório Git.
+100. `git repack -a -d`: Compacta os objetos do repositório.
+
